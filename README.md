@@ -57,10 +57,9 @@ Relu 장점
 
 <img width="500" alt="fully connected" src="https://user-images.githubusercontent.com/44501825/48899953-64e37980-ee94-11e8-8482-decfa8a9b3b3.png">
 
-최종적으로 Fully Connected 과정을 통해 최종 Layer를 Class들을 분류한다.
+최종적으로 Fully Connected 과정을 통해 최종 Layer를 Class들을 분류합니다.
 즉, 최종 Layer를 1차원으로 길에 늘린뒤 가중치들을 최종 Fully connected Layer 하나하나에 연결시켜주는 과정을
-거쳐준다 
-이과정에서 가중치들을 Dropout 시켜주어 overfitting을 예방한다.(학습시 가중치에 너무 과적합되어 버릴수 있어 일부 가중치를 랜덤하게 버려준다)
+거쳐주며 이과정에서 가중치들을 Dropout 시켜주어 overfitting을 예방합니다.(학습시 가중치에 너무 과적합되어 버릴수 있어 일부 가중치를 랜덤하게 버려줌.)
 
 
 # 학습결과
