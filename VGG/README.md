@@ -17,7 +17,7 @@ Input->Convolution1->Batch Normalization->Relu->Max Pooling...Convolution5->Batc
 
 ![vgg abstract](https://user-images.githubusercontent.com/44501825/48889093-090af780-ee78-11e8-8fbb-08e5b86f68b8.jpg)
 
-논문(Very Deep Convolutional Networks for Large-Scale Image RecognitionKaren Simonyan, Andrew Zisserman) 내용을 살펴보면 VGG Layer에서는 3x3의 작은 Filter크기를 이용해 깊게(16-19) 가중치 레이어를 만들면 좋은 결과를 얻었다는 내용이 있습니다.
+논문 내용을 살펴보면 VGG Layer에서는 3x3의 작은 Filter크기를 이용해 깊게(16-19) 가중치 레이어를 만들면 좋은 결과를 얻었다는 내용이 있습니다.
 이게 따라 소스구현시 3x3의 필더크기로 convolution layer를 구성하였습니다.
 
 
@@ -84,6 +84,6 @@ epoch 210 valid set accuracy : 0.7782451923076923
 final test set accuracy : 0.7724358974358975
 
 
-
+참고논문 : Very Deep Convolutional Networks for Large-Scale Image RecognitionKaren [Simonyan, Andrew Zisserman]
 
   
