@@ -4,7 +4,7 @@
 cifar 데이터셋을 활용하여 만든 VGG-16 Layer 입니다
 해당 소스는 python Tensorflow기반으로 만들었습니다.
 
-# Classial CNN Architecture
+#  Network Architectures
 
 ![vgg-layer table](https://user-images.githubusercontent.com/44501825/48899188-3cf31680-ee92-11e8-9a4d-228d12ccab8c.jpg)
 
