@@ -28,31 +28,13 @@ cifar 데이터셋을 활용하여 만든 ResNet Layer 입니다
 
 ## shortcut connections
 
-![vgg abstract](https://user-images.githubusercontent.com/44501825/48889093-090af780-ee78-11e8-8fbb-08e5b86f68b8.jpg)
+![shortcut connections](https://user-images.githubusercontent.com/44501825/48916734-c9b7c780-eec6-11e8-8e95-34b7de2822ed.jpg)
 
-논문(Very Deep Convolutional Networks for Large-Scale Image RecognitionKaren Simonyan, Andrew Zisserman) 내용을 살펴보면 VGG Layer에서는 3x3의 작은 Filter크기를 이용해 깊게(16-19) 가중치 레이어를 만들면 좋은 결과를 얻었다는 내용이 있습니다.
-이게 따라 소스구현시 3x3의 필더크기로 convolution layer를 구성하였습니다.
+
 
 
 # 학습결과
 
-50000장의 트레이닝 셋과 10000장의 테스트 셋에 대한 결과이다.
-
-최종적으로 test 77% 정도의 정확도를 보여주었다
-
-epoch : 206, loss : 0.004638576596625251, accuracy : 1.0
-
-epoch : 207, loss : 0.007005987549474279, accuracy : 0.9999554843304843
-
-epoch : 208, loss : 0.009715790177669003, accuracy : 0.9998219373219374
-
-epoch : 209, loss : 0.004735732453029823, accuracy : 0.9998441951566952
-
-epoch : 210, loss : 0.005462177022871614, accuracy : 0.9998441951566952
-
-epoch 210 valid set accuracy : 0.7782451923076923
-
-final test set accuracy : 0.7724358974358975
 
 
 
