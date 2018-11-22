@@ -69,11 +69,17 @@ Relu 장점
 최종적으로 test 77% 정도의 정확도를 보여주었다
 
 epoch : 206, loss : 0.004638576596625251, accuracy : 1.0
+
 epoch : 207, loss : 0.007005987549474279, accuracy : 0.9999554843304843
+
 epoch : 208, loss : 0.009715790177669003, accuracy : 0.9998219373219374
+
 epoch : 209, loss : 0.004735732453029823, accuracy : 0.9998441951566952
+
 epoch : 210, loss : 0.005462177022871614, accuracy : 0.9998441951566952
+
 epoch 210 valid set accuracy : 0.7782451923076923
+
 final test set accuracy : 0.7724358974358975
 
 
