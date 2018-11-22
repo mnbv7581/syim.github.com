@@ -20,7 +20,13 @@ cifar 데이터셋을 활용하여 만든 ResNet Layer 입니다
 직접 다운 샘플링 합니다(VGG의 경우 Max Pooling을 사용)
 
 
-## 1.Convolution
+![plainnet test error](https://user-images.githubusercontent.com/44501825/48915563-75aae400-eec2-11e8-9722-9fc526f656a4.jpg)
+
+하지만 PlainNet의 Layer층의 깊이가 깊어질수록 훈련오류가 커지는 문제가 발생 하였습니다.
+그림에서의 그래프를 확인해보면 20-Layer보다 56-Layer가 에러율이 더 큰것을 확인할 수 있다. 같은 학습환경에서 이러한 차이가
+나타나는 문제가 발견되었고 그러한 문제를 개선하기위해 "shortcut connections"이라는 개념을 도입하여 에러율을 줄였습니다.
+
+## shortcut connections
 
 ![vgg abstract](https://user-images.githubusercontent.com/44501825/48889093-090af780-ee78-11e8-8fbb-08e5b86f68b8.jpg)
 
@@ -50,5 +56,6 @@ final test set accuracy : 0.7724358974358975
 
 
 
+참고논문 : Deep Residual Learning for Image Recognition[Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun]Microsoft Research {kahe, v-xiangz, v-shren, jiansun}@microsoft.com
 
   
