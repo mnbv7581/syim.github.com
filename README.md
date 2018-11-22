@@ -1,23 +1,26 @@
 # syim.github.com
 
 
-Cifar 데이터셋을 활용하여 만든 VGG Layer 입니다
-
+Cifar 데이터셋을 활용하여 만든 VGG-16 Layer 입니다
+해당 소스는 python Tensorflow기반으로 만들었습니다.
 
 # Classial CNN Architecture
+
+![vgg-layer table](https://user-images.githubusercontent.com/44501825/48899188-3cf31680-ee92-11e8-9a4d-228d12ccab8c.jpg)
+
 
 Input->Convolution1->Batch Normalization->Relu->Max Pooling...Convolution5->Batch Normalization->Relu->Max Pooling->fully Connected
 
 
-# 1.Convolution
+## 1.Convolution
 
 ![vgg abstract](https://user-images.githubusercontent.com/44501825/48889093-090af780-ee78-11e8-8fbb-08e5b86f68b8.jpg)
 
-논문 내용을 살펴보면 VGG Layer에서는 3x3의 작은 Filter크기를 이용해 깊게(16-19) 가중치 레이어를 만들면 좋은 결과를 얻었다는 내용입니다.
+논문(Very Deep Convolutional Networks for Large-Scale Image RecognitionKaren Simonyan, Andrew Zisserman) 내용을 살펴보면 VGG Layer에서는 3x3의 작은 Filter크기를 이용해 깊게(16-19) 가중치 레이어를 만들면 좋은 결과를 얻었다는 내용이 있습니다.
 이게 따라 소스구현시 3x3의 필더크기로 convolution layer를 구성하였습니다.
 
 
-# 2.Batch Normalization
+## 2.Batch Normalization
 
 ![batchnormal](https://user-images.githubusercontent.com/44501825/48889303-b0882a00-ee78-11e8-97b1-363cfd207809.png)
 
@@ -28,7 +31,7 @@ Input->Convolution1->Batch Normalization->Relu->Max Pooling...Convolution5->Batc
 생각하면 된다. 그렇게 [표준값, 표준점수]를 구하게 됨(x의 값이 평균에서 얼만큼 떨어져 있는지를 계산하게 됨)
 이렇게 각 레이어의 분포를 같게 함으로써 안정적이게 학습할 수 있게 해줍니다.
 
-# 3.Relu(Activation function)
+## 3.Relu(Activation function)
 ![sigmoid-relu](https://user-images.githubusercontent.com/44501825/48898424-146a1d00-ee90-11e8-83b4-ef8c4b353377.png)
 
 
@@ -41,7 +44,7 @@ Relu 장점
 2. Gradient Vanishing이 없으며 Gradient가 증가하지 않는다
 3. 선형함수이므로 미분 계산이 간단하다.
 
-
+## 4. Max pooling 
 
 
   
