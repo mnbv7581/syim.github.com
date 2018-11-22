@@ -1,6 +1,0 @@
-model_checkpoint_path: "vgg16_300.ckpt"
-all_model_checkpoint_paths: "vgg16_296.ckpt"
-all_model_checkpoint_paths: "vgg16_297.ckpt"
-all_model_checkpoint_paths: "vgg16_298.ckpt"
-all_model_checkpoint_paths: "vgg16_299.ckpt"
-all_model_checkpoint_paths: "vgg16_300.ckpt"
