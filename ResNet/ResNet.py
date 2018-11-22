@@ -17,8 +17,12 @@ def BatchNormalization(x, training, scope):
 def residual_block_first(x, out_channel, layer_name, isTraining):
     conv_index = 1
     
-    x = tf.layers.max_pooling2d(inputs = x, pool_size = [2, 2], strides = 2, name = layer_name + '_pool_1')
-    x = tf.layers.conv2d(inputs = x, filters = out_channel, kernel_size = [3, 3], strides = 1, padding='same', name= layer_name + '_conv_' + str(conv_index))
+    #===========================================================================
+    # x = tf.layers.max_pooling2d(inputs = x, pool_size = [2, 2], strides = 2, name = layer_name + '_pool_1')
+    # x = tf.layers.conv2d(inputs = x, filters = out_channel, kernel_size = [3, 3], strides = 1, padding='same', name= layer_name + '_conv_' + str(conv_index))
+    # conv_index += 1
+    #===========================================================================
+    x = tf.layers.conv2d(inputs = x, filters = out_channel, kernel_size = [3, 3], strides = 2, padding = 'same', name = layer_name + '_down_conv_' + str(conv_index))
     conv_index += 1
 
     last_x = x
