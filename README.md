@@ -9,7 +9,8 @@ cifar 데이터셋을 활용하여 만든 VGG-16 Layer 입니다
 ![vgg-layer table](https://user-images.githubusercontent.com/44501825/48899188-3cf31680-ee92-11e8-9a4d-228d12ccab8c.jpg)
 
 
-Input->Convolution1->Batch Normalization->Relu->Max Pooling...Convolution5->Batch Normalization->Relu->Max Pooling->fully Connected
+Input->Convolution1->Batch Normalization->Relu->Max Pooling...
+    Convolution5->Batch Normalization->Relu->Max Pooling->fully Connected
 
 
 ## 1.Convolution
