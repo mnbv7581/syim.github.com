@@ -1,7 +1,7 @@
 # syim.github.com
 
 
-Cifar 데이터셋을 활용하여 만든 VGG-16 Layer 입니다
+cifar 데이터셋을 활용하여 만든 VGG-16 Layer 입니다
 해당 소스는 python Tensorflow기반으로 만들었습니다.
 
 # Classial CNN Architecture
@@ -45,6 +45,38 @@ Relu 장점
 3. 선형함수이므로 미분 계산이 간단하다.
 
 ## 4. Max pooling 
+
+![max pooling](https://user-images.githubusercontent.com/44501825/48899305-99563600-ee92-11e8-89fc-f5967921559b.png)
+
+여러가지 pooling 기법중 많이 사용되는 Max Pooling을 사용하여 Sampling 과정을 거쳤습다.
+특정 Feature가 존재할 때 가장 큰 Activation값을 가지게하여 효과적일 수 있다고며 실제로 다른 Pooling 기법보다
+더 좋은 결과를 보여줬다고 합니다.(2x2 filter, stride=2 사용함)
+
+## 5. Fully Connected
+
+<img width="500" alt="fully connected" src="https://user-images.githubusercontent.com/44501825/48899953-64e37980-ee94-11e8-8482-decfa8a9b3b3.png">
+
+최종적으로 Fully Connected 과정을 통해 최종 Layer를 Class들을 분류한다.
+즉, 최종 Layer를 1차원으로 길에 늘린뒤 가중치들을 최종 Fully connected Layer 하나하나에 연결시켜주는 과정을
+거쳐준다 
+이과정에서 가중치들을 Dropout 시켜주어 overfitting을 예방한다.(학습시 가중치에 너무 과적합되어 버릴수 있어 일부 가중치를 랜덤하게 버려준다)
+
+
+# 학습결과
+
+50000장의 트레이닝 셋과 10000장의 테스트 셋에 대한 결과이다.
+
+최종적으로 test 77% 정도의 정확도를 보여주었다
+
+epoch : 206, loss : 0.004638576596625251, accuracy : 1.0
+epoch : 207, loss : 0.007005987549474279, accuracy : 0.9999554843304843
+epoch : 208, loss : 0.009715790177669003, accuracy : 0.9998219373219374
+epoch : 209, loss : 0.004735732453029823, accuracy : 0.9998441951566952
+epoch : 210, loss : 0.005462177022871614, accuracy : 0.9998441951566952
+epoch 210 valid set accuracy : 0.7782451923076923
+final test set accuracy : 0.7724358974358975
+
+
 
 
   
