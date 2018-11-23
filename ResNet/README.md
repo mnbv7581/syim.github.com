@@ -23,7 +23,7 @@ cifar 데이터셋을 활용하여 만든 ResNet Layer 입니다
 ![plainnet test error](https://user-images.githubusercontent.com/44501825/48915563-75aae400-eec2-11e8-9722-9fc526f656a4.jpg)
 
 하지만 PlainNet의 Layer층의 깊이가 깊어질수록 훈련오류가 커지는 문제가 발생 하였습니다.
-그림에서의 그래프를 확인해보면 20-Layer보다 56-Layer가 에러율이 더 큰것을 확인할 수 있다. 같은 학습환경에서 이러한 차이가
+그림에서의 그래프를 확인해보면 20-Layer보다 56-Layer가 에러율이 더 큰것을 확인할 수 있습니다. 같은 학습환경에서 이러한 차이가
 나타나는 문제가 발견되었고 그러한 문제를 개선하기위해 "shortcut connections"이라는 개념을 도입하여 에러율을 줄였습니다.
 
 ## shortcut connections
