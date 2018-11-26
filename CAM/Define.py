@@ -1,0 +1,13 @@
+
+IMAGE_CHANNEL = 3
+IMAGE_WIDTH = 32
+IMAGE_HEIGHT = 32
+
+CLASSES = 10
+
+MAX_EPOCHS = 300
+BATCH_SIZE = 64
+
+#CIFAR10 - ResNet
+#filters = [32, 64, 128, 256]
+filters = [16, 32, 64, 128]
