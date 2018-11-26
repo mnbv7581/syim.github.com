@@ -34,7 +34,7 @@ Layer가 깊으면 깊을수록 학습이 잘 된다는 것이 딥러닝에서�
 Layer가 깊어질수록 Gradient의 전달문제가 발생하여 이 문제를 해결하기위해 [BN -> Relu -> Conv] 과정을 거친 F(x)에
 이과정을 거치기 바로 전인 x를 더하여 Gradient 전달 문제를 해결하였습니다.
 
-##Cifar Dataset
+## Cifar Dataset
 
 참고논문의 내용을 참고해보니 Resnet팀은 Cifar Dataset에대해 어떻게 실험 하였는지에 대해 내용이 있다
 내용을 요약해보면 
