@@ -30,7 +30,8 @@ feature map을 얻을 수 있게 됩니다.
 
 
 
-참고논문 : Deep Residual Learning for Image Recognition[Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun]Microsoft Research {kahe, v-xiangz, v-shren, jiansun}@microsoft.com
+참고논문 : YOLO9000:Better, Faster, Stronger 
 
+Link : https://pjreddie.com/darknet/yolo/
   
 
