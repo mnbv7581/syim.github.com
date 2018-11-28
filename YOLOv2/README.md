@@ -52,6 +52,16 @@ V2에서는 각각의 5개의 Anchor Box들이 존재하고 Anchor Box들은 독
 경계박스를 사용한 후는 69.2 mAP, recall 88%로 
 mAP는 조금 떨어졌지만 recall은 크게 상승했습니다.
 
+## Demension Clusters
+
+YoloV2의 Anchor box들의 종횡비는 Define 되어서 사용하는데 Ahchor box의 종횡비는 VOC나 COCO 데이터셋 등의
+실제 오브젝트의 경계박스들을 k-mean Cluster를 통해 클러스터링 하였습니다.
+적절한 Anchor box를 사용하는 것은 IOU점수를 높히는 방법이기에 이 작업은 중요하다고 볼 수 있습니다.
+
+![anchor cluster](https://user-images.githubusercontent.com/44501825/49169747-ded89e80-f37d-11e8-904e-134960ed5562.jpg)
+
+왼쪽 그래프를 보면 k-mean cluster의 클러스터링 갯수인 k를 크게 할 수록 IOU가 커져 recall이 상승 하게됩니다. 
+하지만 recall과 model의 복잡성을 고려하여 k=5로 하여 사용합니다.
 
 ## 학습결과
 
