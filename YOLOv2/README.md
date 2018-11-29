@@ -56,7 +56,12 @@ mAP는 조금 떨어졌지만 recall은 크게 상승했습니다.
 
 YoloV2의 Anchor box들의 종횡비는 Define 되어서 사용하는데 Ahchor box의 종횡비는 VOC나 COCO 데이터셋 등의
 실제 오브젝트의 경계박스들을 k-mean Cluster를 통해 클러스터링 하였습니다.
-적절한 Anchor box를 사용하는 것은 IOU점수를 높히는 방법이기에 이 작업은 중요하다고 볼 수 있습니다.
+여기서 유클라디안 거리를 이용한 k-mean을 사용하면 경계박스가 커질수록 에러율이 커지게 됩니다.
+그렇기 때문에 IOU점수를 높여 좋은 Anchor box를 선택하는 거리 공식을 사였습니다. 공식은 다음과 같습니다.
+  
+  * d(box, centroid) = 1 − IOU(box, centroid)
+
+공식으로 k와 avg IOU의 관계를 그래프로 나타내었습니다.
 
 ![anchor cluster](https://user-images.githubusercontent.com/44501825/49169747-ded89e80-f37d-11e8-904e-134960ed5562.jpg)
 
