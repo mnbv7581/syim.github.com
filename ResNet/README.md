@@ -44,8 +44,8 @@ Layer가 깊어질수록 Gradient의 전달문제가 발생하여 이 문제를 
 2. Layers : 
 
 ![9](https://user-images.githubusercontent.com/44501825/48994093-aa4dc280-f184-11e8-9258-fea2e12d4be3.jpg)
-
-*n : Residual block 횟수 (n = {3,5,7,9}, {20,32,44,56} Layer Network)
+      
+      *n : Residual block 횟수 (n = {3,5,7,9}, {20,32,44,56} Layer Network)
 
 3. training :
 - 최적화 알고리즘은 Momentum(α = 0.9)를 사용
