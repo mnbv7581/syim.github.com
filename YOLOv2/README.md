@@ -65,11 +65,27 @@ YoloV2의 Anchor box들의 종횡비는 Define 되어서 사용하는데 Ahchor 
 
 ![anchor cluster](https://user-images.githubusercontent.com/44501825/49169747-ded89e80-f37d-11e8-904e-134960ed5562.jpg)
 
-왼쪽 그래프를 보면 k-mean cluster의 클러스터링 갯수인 k를 크게 할 수록 IOU가 커져 recall이 상승 하게됩니다. 
+왼쪽 그래프를 보면 k-mean cluster
+의 클러스터링 갯수인 k를 크게 할 수록 IOU가 커져 recall이 상승 하게됩니다. 
 하지만 recall과 model의 복잡성을 고려하여 k=5로 하여 사용합니다.
+## Direct location prediction
+
+* Yolo 와 Anchor box를 같이 사용시 발생하는 문제
+모델이 학습 초기에 불안정성을 보여주는 문제가 있습니다. 그 원인으로는 경계박스(x,y)위치를 예측하는
+부분에서 문제가 발생합니다.
+지역 제안 네트워크(RPN)에서 tx와 ty 그리고 중심좌표(x,y)를 다음과 같이 구합니다.
+
+![rpn](https://user-images.githubusercontent.com/44501825/49885852-a2c43400-fe7b-11e8-91d9-fa4f6e257a41.jpg)
+
+예를 들어 설명하면 tx = 1이면 앵커박스는 폭만큼 오른쪽, tx = -1 이면 앵커박스는 폭만큼 왼쪽으로 이동시킨다.
+이 공식을 사용했을때 문제점은 제약이 없다는 것입니다. 영상의 어느 위치에 경계박스를 예측하는가 상관없이 이미지
+전체에서 어디에도 나타날 수 있게 됩니다.
+
+
+
+
 
 ## 학습결과
-
 
 
 
