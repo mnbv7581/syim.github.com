@@ -92,8 +92,22 @@ x, y의 GT(Ground Truth)은 항상 0 ~ 1 사이의 값이 되며 예측할 sigmo
 
 ![detection local prediction](https://user-images.githubusercontent.com/44501825/49888747-21709f80-fe83-11e8-915d-753184f5eec5.jpg)
 
-(cx, cy)는 이미지 좌상단으로 부터의 offset,  경계 상자의 폭과 높이는 pw, ph 
+(cx, cy)는 이미지 좌상단으로 부터의 offset,  경계 상자의 폭과 높이는 pw, ph 입니다.
 
+
+![location prediction](https://user-images.githubusercontent.com/44501825/49957581-a1fad300-ff4b-11e8-9ff4-fb8202435b04.jpg)
+
+tx, ty는 시그모이드 함수를 거치게 되는데 시그모이드 함수를 거친 결과가 0.5라는 값을 기대합니다.
+즉, tx와 ty는 0이 되도록 유도하는 것이며 시그모이드를 거친 tx, ty값이 0.5라는 것은 그리드셀의 중심 좌표를 의미합니다.
+
+## Fine-Grained Features
+
+YoloV2에서는 13x13의 Feature map에서 오브젝트를 예측하는데 이 방법은 큰 오브젝트를 탐지하는 것에는 적합할 수 있으나
+작은 오브젝트를 탐지하는 것에는 충분하지 못합니다.
+
+그렇기 때문에 Yolo팀은 26x26의 해상도의 이전계층 Layer를 스킵하여 13x13 Layer에 연결하는 Passthrough Layer를 추가하였습니다.
+
+이 방법으로 Yolo는 1%의 성능향상이 있었습니다. 
 
 
 ## 학습결과
