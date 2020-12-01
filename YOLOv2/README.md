@@ -61,7 +61,7 @@ YoloV2의 Anchor box들의 종횡비는 Define 되어서 사용하는데 Ahchor 
   
   * d(box, centroid) = 1 − IOU(box, centroid)
 
-공식으로 k와 avg IOU의 관계를 그래프로 나타내었습니다.
+k와 avg IOU의 관계를 그래프
 
 ![anchor cluster](https://user-images.githubusercontent.com/44501825/49169747-ded89e80-f37d-11e8-904e-134960ed5562.jpg)
 
