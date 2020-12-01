@@ -66,8 +66,8 @@ k와 avg IOU의 관계를 그래프
 ![anchor cluster](https://user-images.githubusercontent.com/44501825/49169747-ded89e80-f37d-11e8-904e-134960ed5562.jpg)
 
 왼쪽 그래프를 보면 k-mean cluster
-의 클러스터링 갯수인 k를 크게 할 수록 IOU가 커져 recall이 상승 하게됩니다. 
-하지만 recall과 model의 복잡성을 고려하여 k=5로 하여 사용합니다.
+의 클러스터링 갯수인 k를 크게 할 수록 IOU가 커져 recall이 상승하게 됩니다. 
+하지만 recall과 model의 복잡성을 고려하여 k=5로 사용합니다.
 ## Direct location prediction
 
 * Yolo 와 Anchor box를 같이 사용시 발생하는 문제
